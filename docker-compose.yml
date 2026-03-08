@@ -4,9 +4,9 @@ services:
     ports:
       - "8080:3000"
 
-  updater:
+  watchtower:
     image: containrrr/watchtower
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    command: --interval 30 --one-shot 
+    command: --interval 30 --debug 
 
